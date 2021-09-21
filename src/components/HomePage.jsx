@@ -8,7 +8,6 @@ const HomePage = () => {
         setGetStarted(prevGetStarted=> !prevGetStarted)
     }
    
-console.log(getStarted);
     return (  
         <div className='Homepage-container'>
             {!getStarted && (<React.Fragment>

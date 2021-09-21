@@ -11,7 +11,6 @@ const SearchLocation = () => {
     };
     function displayWeather(e){
         e.preventDefault();
-        console.log(location)
         setLocation('')
     }
     
@@ -33,16 +32,16 @@ const SearchLocation = () => {
                 <div className="autocomplete-dropdown-container" >
                 {/* {loading && <div>Loading....</div>} */}
                 {suggestions.map(suggestion => {
-                    const className = suggestion.active ? 'suggestion-item--active': 'suggestion-item';
+                    // const className = suggestion.active ? 'suggestion-item--active': 'suggestion-item';
                     const style = suggestion.active ? { backgroundColor: '#ccc', cursor: 'pointer',}: { backgroundColor: '#ffffff', cursor: 'pointer' };
                     return (  
-                    <div {...getSuggestionItemProps(suggestion, {className, style})}>                   
-                        <span>{suggestion.description}</span>
+                    <div className='input-suggestion' {...getSuggestionItemProps(suggestion, {style})}>                   
+                         <i class="material-icons">location_on</i> <span>{suggestion.description}</span>
                     </div>
                     );
                 })}
                 </div>
-                <button class='Weatheryy-Start-Button'>Search</button>
+                <button className='Weatheryy-Start-Button'>Search</button>
                 </form>
           </div>
         )}
