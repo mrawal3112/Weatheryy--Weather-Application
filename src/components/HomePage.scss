@@ -16,14 +16,14 @@
   box-shadow: 2px 1px 11px 6px rgba(0, 0, 0, 0.25);
   min-height: 70%;
 }
-.Weatheryy-logo {
+.Weatheryy-Logo__HomePage {
   width: 12rem;
   height: 12rem;
   position: relative;
   margin: 2rem;
   left: 35%;
 }
-.Weatheryy-Intro {
+.Weatheryy-Intro__HomePage {
   background: linear-gradient(#de5fa0, #52a4ea);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -49,22 +49,33 @@
   cursor: pointer;
   border: 1px solid #89dffb;
 }
-
-.weatheryy-logo {
-  width: 5rem;
-  height: 5rem;
-  margin: 1.5rem 1rem 1.5rem 3rem;
-}
 .weatheryy-banner {
   display: flex;
   flex-direction: row;
 }
-.weatheryy-intro {
+.Weatheryy-Logo__SearchPage {
+  width: 5rem;
+  height: 5rem;
+  margin: 1.5rem 1rem 1.5rem 3rem;
+}
+.Weatheryy-Intro__SearchPage {
   font-size: 3rem;
   background: linear-gradient(#de5fa0, #52a4ea);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.Weatheryy-Logo__WeatherPage {
+  width: 3rem;
+  height: 3rem;
+  margin: 1.5rem 1rem 1.5rem 3rem;
+}
+.Weatheryy-Intro__WeatherPage {
+  font-size: 2rem;
+  background: linear-gradient(#de5fa0, #52a4ea);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 input[type="text"] {
   width: 60%;
   padding: 0.75rem;
@@ -100,4 +111,21 @@ input[type="text"] {
   display: flex;
   align-items: center;
   font-size: 1rem;
+}
+.WeatherPage-container {
+  width: 85%;
+  height: auto;
+  background-color: white;
+  margin: auto;
+  border-radius: 2rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  box-shadow: 2px 1px 11px 6px rgba(0, 0, 0, 0.25);
+}
+
+.cityWeatherInfo {
+  padding: 0 3rem;
 }

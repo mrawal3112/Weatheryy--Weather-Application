@@ -1,0 +1,9 @@
+.cityName {
+  font-size: 2.5rem;
+  margin: 5px 0;
+}
+.presentDate {
+  font-size: 1.1rem;
+  color: rgb(87, 82, 82);
+  margin: 0;
+}

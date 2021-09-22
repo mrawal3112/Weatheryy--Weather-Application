@@ -1,12 +1,13 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import './HomePage.scss'
 import logo from '../Images/cloudy.png'
 import PlacesAutocomplete ,{geocodeByAddress,
     getLatLng}from 'react-places-autocomplete';
 
-const SearchLocation = () => {
+const SearchLocation = (props) => {
     const[location,setLocation] = useState('');
     const[coordinates,setCoordinates] = useState({lat:'',lng:''})
+    const[weatherPage,setWeatherPage] = useState(false)
     const handleSelect = async value=>
     {
         const coords = await geocodeByAddress(value);
@@ -16,24 +17,34 @@ const SearchLocation = () => {
     };
     function displayWeather(e){
         e.preventDefault();
-        console.log(location)
-        console.log(coordinates)
+        // console.log(location)
+        // console.log(coordinates)
         if(location.trim()==='')
         {
             alert('Please enter a valid location')
+            setWeatherPage(false)
         }
-        setLocation('')
+        else{
+        setWeatherPage(prevWeatherPage=>!prevWeatherPage);}
     }
+    useEffect(()=>{
+        props.weatherInfo(weatherPage)
+        props.cityInfo(location)
+        props.coordsInfo(coordinates)
+    },[weatherPage])
+
     return (
+        <React.Fragment>
+        {!weatherPage && 
         <PlacesAutocomplete value={location} onChange={setLocation} onSelect={handleSelect}>
         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
           <div>
                 <div className='weatheryy-banner'>
                     <div>
-                        <img src={logo} alt='logo' className='weatheryy-logo'></img>
+                        <img src={logo} alt='logo' className='Weatheryy-Logo__SearchPage'></img>
                     </div>
                     <div>
-                        <p className='weatheryy-intro '>WEATHERYY</p>
+                        <p className='Weatheryy-Intro__SearchPage'>WEATHERYY</p>
                     </div>
                 </div>
             <form onSubmit={displayWeather}>
@@ -45,20 +56,21 @@ const SearchLocation = () => {
                     const style = suggestion.active ? { backgroundColor: '#ccc', cursor: 'pointer',}: { backgroundColor: '#ffffff', cursor: 'pointer' };
                     return (  
                     <div className='input-suggestion' {...getSuggestionItemProps(suggestion, {style})}>                  
-                    {console.log(suggestion)} 
+                    {/* {console.log(suggestion)}  */}
                          <i className="material-icons">location_on</i><span>{suggestion.description}</span>
                     </div>
                     );
                 })}
-                
                 </div>
                 <button className='Weatheryy-Start-Button'><span>Search</span></button>
                 </form>
           </div>
         )}
-      </PlacesAutocomplete>
+      </PlacesAutocomplete>}
+      </React.Fragment>
      );
 }
  
 export default SearchLocation;
+
 
