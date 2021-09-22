@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Numans&display=swap");
+* {
+  font-family: "Numans", sans-serif;
+}
 .Homepage-container {
   width: 70%;
   height: auto;
@@ -10,6 +14,7 @@
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   box-shadow: 2px 1px 11px 6px rgba(0, 0, 0, 0.25);
+  min-height: 70%;
 }
 .Weatheryy-logo {
   width: 12rem;
@@ -35,9 +40,10 @@
   left: 35%;
   border: none;
   outline: none;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   border-radius: 2rem;
-  margin: 1rem 0;
+  margin: 2rem 0;
+  border: 1px solid transparent;
 }
 .Weatheryy-Start-Button:hover {
   cursor: pointer;
@@ -47,7 +53,7 @@
 .weatheryy-logo {
   width: 5rem;
   height: 5rem;
-  margin: 2.5rem;
+  margin: 1.5rem 1rem 1.5rem 3rem;
 }
 .weatheryy-banner {
   display: flex;
@@ -87,12 +93,11 @@ input[type="text"] {
   padding: 1rem;
 }
 .input-suggestion {
-  width: 500px;
-  height: 60px;
+  width: 100%;
+  height: 50px;
   background-color: white;
   border-bottom: 1px dotted black;
   display: flex;
   align-items: center;
   font-size: 1rem;
-  color: black;
 }
