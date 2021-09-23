@@ -1,0 +1,75 @@
+.WeatherDeatils-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.tempInfo {
+  width: 40%;
+  height: auto;
+  border-right: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+
+.additionalInfo {
+  width: 60%;
+  height: auto;
+  border-left: 1px solid black;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 0 1.75rem;
+  // background-color: #2196f3;
+  // padding: 10px;
+}
+
+.climate-icon-container {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.climateIcon {
+  width: 90%;
+  height: 90%;
+  padding: 2rem;
+}
+.Climate-info-container {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  p {
+    display: flex;
+    justify-content: center;
+  }
+}
+.Today_temp {
+  font-size: 6rem;
+  margin: 0;
+}
+.Today_climate {
+  font-size: 1rem;
+  margin: 0;
+  text-transform: capitalize;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-top: 0.5rem;
+  font-size: 30px;
+}
+.info-heading {
+  font-size: 1rem;
+  color: rgb(73, 73, 73);
+}
+.info-details {
+  font-size: 1.75rem;
+  margin-top: 0.5rem;
+}

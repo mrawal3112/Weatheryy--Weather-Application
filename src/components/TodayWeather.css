@@ -1,0 +1,63 @@
+.forecast-container {
+  margin-top: 3rem;
+}
+.forecastHeading {
+  font-size: 1.5rem;
+}
+.temp-pills-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.pill-container {
+  width: 11%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: double 2px transparent;
+  border-radius: 2rem;
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top left, #de5fa0, #52a4ea);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.weather-logo {
+  width: 3rem;
+  height: 3rem;
+  margin: 0.5rem 0;
+}
+.specifiedTime,
+.specifiedTemp {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.forecastTab-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: double 2px transparent;
+  border-radius: 2rem;
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top left, #de5fa0, #52a4ea);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  margin: 1rem 0;
+}
+.infoHeading {
+  font-size: 1rem;
+  color: #494949;
+}
+.infoData {
+  font-size: 1.5rem;
+}
+.infoConatainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
