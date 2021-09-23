@@ -2,6 +2,8 @@ import React from 'react';
 import logo from '../Images/cloudy.png'
 import CityInfo from './CityInfo';
 import WeatherDetails from './WeatherDetails';
+import TodayWeather from './TodayWeather';
+import FutureForecast from './FutureForecast';
 import './HomePage.scss'
 const WeatherInfoPage = (props) => {
     return ( 
@@ -16,7 +18,9 @@ const WeatherInfoPage = (props) => {
             </div>
             <div className='cityWeatherInfo'>
             <CityInfo city={props.city}/>
-            <WeatherDetails geoLocation={props.geoLocation}/> 
+            <WeatherDetails  cityInfo={props.geoLocation}/> 
+            <TodayWeather/>
+            <FutureForecast/>
             </div>
         </React.Fragment>
      );

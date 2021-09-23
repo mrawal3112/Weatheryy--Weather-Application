@@ -18,14 +18,16 @@ const HomePage = () => {
     {
         setDisplayReport(value);
     }
+
     const getCity=value=>
     {
-setselectedCity(value)
+        setselectedCity(value)
     }
+
     const getCoords = value =>{
-setCityCoords({lat:value.lat,lng:value.lng})
+        setCityCoords({lat:value.lat,lng:value.lng})
     } 
-   
+
     return (  
         <div className={displayReport?'WeatherPage-container':'Homepage-container'}>
             {!getStarted && (<React.Fragment>
@@ -34,7 +36,7 @@ setCityCoords({lat:value.lat,lng:value.lng})
                 <button className='Weatheryy-Start-Button' onClick={changeState}><span>Get Started</span></button>
             </React.Fragment>)}
             {getStarted && <SearchLocation weatherInfo={weatherPage} cityInfo={getCity} coordsInfo={getCoords}/>}
-            {displayReport && <WeatherInfoPage city={selectedCity} geoLocation={cityCoords}/>}
+            {displayReport && <WeatherInfoPage city={selectedCity} geoLocation={cityCoords} />}
         </div>
     );
 }
