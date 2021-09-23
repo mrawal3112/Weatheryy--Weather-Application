@@ -3,7 +3,7 @@ import logo1 from '../Images/rain.png'
 import './TodayWeather.css'
 const ForecastTabs = () => {
     return ( 
-        <div class='forecastTab-container'>
+        <div className='forecastTab-container'>
             <div className='infoConatainer'>
                 <div className='infoHeading'>21/09</div>
                 <div className='infoData'>Tue</div>
