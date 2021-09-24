@@ -46,8 +46,8 @@ const SearchLocation = (props) => {
                     <div>
                         <img src={logo} alt='logo' className='Weatheryy-Logo__SearchPage'></img>
                     </div>
-                    <div className='Weatheryy-Intro__SearchPage'>
-                        <p>WEATHERYY</p>
+                    <div>
+                        <p className='Weatheryy-Intro__SearchPage'>WEATHERYY</p>
                     </div>
                 </div>
                 <div className='form-container'>
