@@ -30,10 +30,10 @@
   // left: 35%;
 }
 .Weatheryy-Intro__HomePage {
-  // background: linear-gradient(#de5fa0, #52a4ea);
-  // background-clip: text;
-  // -webkit-text-fill-color: transparent;
-  color: black;
+  background-image: linear-gradient(#de5fa0, #52a4ea);
+  background-clip: text;
+  color: transparent;
+  // color: black;
   font-size: 3rem;
   display: flex;
   justify-content: center;
@@ -72,10 +72,9 @@
 }
 .Weatheryy-Intro__SearchPage {
   font-size: 3rem;
-  // background: linear-gradient(#de5fa0, #52a4ea);
-  // background-clip: text;
-  // -webkit-text-fill-color: transparent;
-  color: black;
+  background-image: linear-gradient(#de5fa0, #52a4ea);
+  background-clip: text;
+  color: transparent;
 }
 .Weatheryy-Logo__WeatherPage {
   width: 3rem;
