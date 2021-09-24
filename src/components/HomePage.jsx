@@ -34,8 +34,8 @@ const HomePage = () => {
                 <div>
                 <img src={logo} alt='logo' className='Weatheryy-Logo__HomePage'></img>
                 </div>
-                <div>
-                <p className='Weatheryy-Intro__HomePage'>WELCOME TO WEATHERYY</p>
+                <div className='Weatheryy-Intro__HomePage'>
+                <p style={{margin:0}}>WELCOME TO WEATHERYY</p>
                 </div>
                 <div>
                 <button className='Weatheryy-Start-Button' onClick={changeState}><span>Get Started</span></button>

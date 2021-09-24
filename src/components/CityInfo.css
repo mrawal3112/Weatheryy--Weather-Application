@@ -8,8 +8,17 @@
   margin: 0;
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 420px) {
   .cityName {
     font-size: 1.5rem;
+  }
+  .presentDate {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .cityName {
+    font-size: 1.25rem;
   }
 }

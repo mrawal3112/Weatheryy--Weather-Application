@@ -38,7 +38,7 @@
 .forecastTab-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   border: double 2px transparent;
   border-radius: 1.5rem;
   background-image: linear-gradient(white, white),
@@ -61,7 +61,7 @@
   align-items: center;
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 420px) {
   .forecastHeading {
     font-size: 1.5rem;
   }
@@ -122,5 +122,11 @@
     text-indent: 0;
     display: block;
     line-height: initial;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .forecastHeading {
+    font-size: 1.25rem;
   }
 }

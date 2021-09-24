@@ -127,9 +127,9 @@ input[type="text"] {
   width: 90%;
   height: auto;
   background-color: white;
-  margin-bottom: 5rem;
+  /* margin-bottom: 5rem; */
   border-radius: 2rem;
-  position: absolute;
+  position: relative;
   left: 5%;
   top: 5%;
   box-shadow: 2px 1px 11px 6px rgba(0, 0, 0, 0.25);
@@ -163,7 +163,8 @@ input[type="text"] {
     transform: rotate(360deg);
   }
 }
-@media screen and (max-width: 380px) {
+
+@media screen and (max-width: 420px) {
   .Homepage-container {
     width: 90%;
     // min-height: 90%;
@@ -183,6 +184,55 @@ input[type="text"] {
   .Weatheryy-Intro__SearchPage {
     font-size: 2rem;
     margin: 3.25rem 1rem;
+  }
+  input[type="text"] {
+    left: 10%;
+  }
+  .autocomplete-dropdown-container {
+    left: 10%;
+    width: 65%;
+  }
+  .input-suggestion {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: smaller;
+  }
+  .Weatheryy-Logo__WeatherPage {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 1.5rem 0.5rem 1.5rem 1rem;
+  }
+  .Weatheryy-Intro__WeatherPage {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+  .cityWeatherInfo {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .Homepage-container {
+    width: 90%;
+    // min-height: 90%;
+  }
+  .Weatheryy-Intro__HomePage {
+    font-size: 2rem;
+  }
+  .Weatheryy-Logo__HomePage {
+    width: 9rem;
+    height: 9rem;
+    margin: 3rem 3rem 2rem 3rem;
+  }
+  .Weatheryy-Logo__SearchPage {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 1.5rem 0.5rem 1.5rem 1rem;
+  }
+  .Weatheryy-Intro__SearchPage {
+    font-size: 1.5rem;
+    margin: 2.25rem 0.5rem;
   }
   input[type="text"] {
     left: 10%;

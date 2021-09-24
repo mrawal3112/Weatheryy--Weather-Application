@@ -73,7 +73,7 @@
   margin-top: 0.5rem;
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 420px) {
   .WeatherDeatils-container {
     flex-direction: column;
     margin-top: 0;
@@ -105,5 +105,17 @@
     padding-top: 0.5rem;
     font-size: 30px;
     margin: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .Today_temp {
+    font-size: 4rem;
+  }
+  .info-heading {
+    font-size: 0.8rem;
+  }
+  .info-details {
+    font-size: 1.25rem;
   }
 }
