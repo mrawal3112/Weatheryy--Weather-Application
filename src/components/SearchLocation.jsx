@@ -50,6 +50,7 @@ const SearchLocation = (props) => {
                         <p className='Weatheryy-Intro__SearchPage'>WEATHERYY</p>
                     </div>
                 </div>
+                <div className='form-container'>
             <form onSubmit={displayWeather}>
                 <input {...getInputProps({placeholder: 'Enter Location'})}/>
 
@@ -65,8 +66,9 @@ const SearchLocation = (props) => {
                     );
                 })}
                 </div>
-                <button className='Weatheryy-Start-Button'><span>Search</span></button>
+                <button className='Weatheryy-Start-Button Search-Button'><span>Search</span></button>
                 </form>
+                </div>
           </div>
         )}
       </PlacesAutocomplete>}

@@ -60,3 +60,64 @@
   justify-content: center;
   align-items: center;
 }
+
+@media screen and (min-width: 374px) {
+  .forecastHeading {
+    font-size: 1.5rem;
+  }
+  .temp-pills-container {
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  .pill-container {
+    width: 20%;
+    margin-top: 1rem;
+  }
+  .weather-logo {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .specifiedTime,
+  .specifiedTemp {
+    margin: 1rem 0;
+    font-size: 1rem;
+  }
+  .infoData {
+    font-size: 0.75rem;
+    color: black;
+  }
+  .infoHeading {
+    font-size: 0.75rem;
+  }
+  .low-temp,
+  .high-temp,
+  .wind-speed,
+  .rain-volume {
+    text-indent: -9999px;
+    line-height: 0;
+  }
+  .low-temp::after {
+    content: "Low";
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+  }
+  .high-temp::after {
+    content: "High";
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+  }
+  .wind-speed::after {
+    content: "Wind";
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+  }
+  .rain-volume::after {
+    content: "Rain";
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+  }
+}

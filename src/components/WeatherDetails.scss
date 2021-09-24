@@ -61,7 +61,6 @@
   text-transform: capitalize;
 }
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
   padding-top: 0.5rem;
   font-size: 30px;
 }
@@ -72,4 +71,39 @@
 .info-details {
   font-size: 1.75rem;
   margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 374px) {
+  .WeatherDeatils-container {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .tempInfo {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid black;
+  }
+  .additionalInfo {
+    width: 100%;
+    border: none;
+    grid-template-columns: auto auto;
+    padding: 0;
+  }
+  .Today_climate {
+    font-size: 0.8rem;
+  }
+  .Today_temp {
+    font-size: 5rem;
+  }
+  .info-details {
+    font-size: 1.5rem;
+  }
+  .info_heading {
+    font-size: 0.85rem;
+  }
+  .grid-item {
+    padding-top: 0.5rem;
+    font-size: 30px;
+    margin: 0.5rem;
+  }
 }

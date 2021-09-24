@@ -20,12 +20,12 @@ const WeatherDetails = (props) => {
             <div className='additionalInfo'>
                 
                 <div className="grid-item">
-                    <div className='info-heading'>High</div>
+                    <div className='info-heading'>Highest Temp.</div>
                     <div className='info-details'>{(Math.round(props.weatherInformation.daily[0].temp.max))}<span>&#176;</span></div>
                 </div>
 
                 <div className="grid-item">
-                    <div className='info-heading'>Low</div>
+                    <div className='info-heading'>Lowest Temp.</div>
                     <div className='info-details'>{(Math.round(props.weatherInformation.daily[0].temp.min))}<span>&#176;</span></div>
                 </div>
                 

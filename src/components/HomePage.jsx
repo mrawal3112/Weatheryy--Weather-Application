@@ -30,11 +30,17 @@ const HomePage = () => {
 
     return (  
         <div className={displayReport?'WeatherPage-container':'Homepage-container'}>
-            {!getStarted && (<React.Fragment>
+            {!getStarted && (<div className='homepage-container'>
+                <div>
                 <img src={logo} alt='logo' className='Weatheryy-Logo__HomePage'></img>
+                </div>
+                <div>
                 <p className='Weatheryy-Intro__HomePage'>WELCOME TO WEATHERYY</p>
+                </div>
+                <div>
                 <button className='Weatheryy-Start-Button' onClick={changeState}><span>Get Started</span></button>
-            </React.Fragment>)}
+                </div>
+            </div>)}
             {getStarted && <SearchLocation weatherInfo={weatherPage} cityInfo={getCity} coordsInfo={getCoords}/>}
             {displayReport && <WeatherInfoPage city={selectedCity} geoLocation={cityCoords} />}
         </div>
