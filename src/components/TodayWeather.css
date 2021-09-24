@@ -61,7 +61,7 @@
   align-items: center;
 }
 
-@media screen and (min-width: 374px) {
+@media screen and (max-width: 380px) {
   .forecastHeading {
     font-size: 1.5rem;
   }

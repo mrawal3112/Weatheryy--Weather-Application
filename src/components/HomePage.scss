@@ -163,7 +163,7 @@ input[type="text"] {
     transform: rotate(360deg);
   }
 }
-@media screen and (min-width: 374px) {
+@media screen and (max-width: 380px) {
   .Homepage-container {
     width: 90%;
     // min-height: 90%;

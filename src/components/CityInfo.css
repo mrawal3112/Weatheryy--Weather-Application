@@ -8,7 +8,7 @@
   margin: 0;
 }
 
-@media screen and (min-width: 374px) {
+@media screen and (max-width: 380px) {
   .cityName {
     font-size: 1.5rem;
   }
