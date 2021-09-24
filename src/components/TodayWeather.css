@@ -18,7 +18,7 @@
   justify-content: center;
   align-items: center;
   border: double 2px transparent;
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   background-image: linear-gradient(white, white),
     radial-gradient(circle at top left, #de5fa0, #52a4ea);
   background-origin: border-box;
@@ -40,7 +40,7 @@
   flex-direction: row;
   justify-content: space-around;
   border: double 2px transparent;
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   background-image: linear-gradient(white, white),
     radial-gradient(circle at top left, #de5fa0, #52a4ea);
   background-origin: border-box;

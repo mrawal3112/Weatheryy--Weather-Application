@@ -25,12 +25,12 @@ const ForecastTabs = (props) => {
            
             <div className='infoConatainer'>
                 <div className='infoHeading wind-speed'>Speed Of Wind</div>
-                <div className='infoData'>{((props.info.wind_speed)*3.6).toPrecision(2) +' Km/h'}</div>
+                <div className='infoData'>{((props.info.wind_speed)*3.6).toPrecision(2) +'Km/h'}</div>
             </div>
            
             <div className='infoConatainer'>
                 <div className='infoHeading rain-volume'>Volume Of Rain</div>
-                <div className='infoData'>{!props.info.hasOwnProperty('rain')?"0 mm":((Math.round(props.info.rain*100))) + ' mm'}</div>
+                <div className='infoData'>{!props.info.hasOwnProperty('rain')?"0mm":((Math.round(props.info.rain*100))) + 'mm'}</div>
             </div>
 
         </div>
