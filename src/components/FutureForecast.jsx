@@ -1,17 +1,15 @@
 import React from 'react';
 import './TodayWeather.css'
 import ForecastTabs from './ForecastTabs';
-const FutureForecast = () => {
+const FutureForecast = (props) => {
     return (  
         <div>
             <div className='forecast-container'>
-            <p className='forecastHeading'>Next 5 Days Forecast</p>
+            <p className='forecastHeading'>Next 7 Days Forecast</p>
             <div className='future-forecast-tabs-container'>
-                <ForecastTabs/>
-                <ForecastTabs/>
-                <ForecastTabs/>
-                <ForecastTabs/>
-                <ForecastTabs/>
+                {props.dailyForecast.daily.map((item,index)=>{
+                    return (index!==0?<ForecastTabs info={item} key={index}/>:"")
+                })}
             </div>
         </div>
         </div>

@@ -25,7 +25,9 @@ const SearchLocation = (props) => {
             setWeatherPage(false)
         }
         else{
-        setWeatherPage(prevWeatherPage=>!prevWeatherPage);}
+        setWeatherPage(prevWeatherPage=>!prevWeatherPage);
+    }
+       
     }
     useEffect(()=>{
         props.weatherInfo(weatherPage)

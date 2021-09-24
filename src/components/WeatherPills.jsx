@@ -1,12 +1,11 @@
+import moment from 'moment';
 import React from 'react';
-import logo from '../Images/rain.png'
-const WeatherPills = () => {
-
+const WeatherPills = (props) => {
     return ( 
         <div className='pill-container'>
-            <div className='specifiedTime'>2<span style={{fontSize:'1rem'}}>PM</span></div>
-            <div><img src={logo} alt='logo' className='weather-logo'></img></div>
-            <div className='specifiedTemp'>15<span>&#176;</span></div>
+            <div className='specifiedTime'>{moment.unix(props.info.dt).format('hA')}</div>
+            <div><img src={`https://openweathermap.org/img/wn/${props.info.weather[0].icon}@2x.png`} alt='logo' className='weather-logo'></img></div>
+            <div className='specifiedTemp'>{Math.round(props.info.temp)}<span>&#176;</span></div>
         </div>
      );
 }

@@ -1,20 +1,14 @@
 import React from 'react';
 import './TodayWeather.css'
 import WeatherPills from './WeatherPills';
-const TodayWeather = () => {
+const TodayWeather = (props) => {
     return (  
         <div className='forecast-container'>
             <p className='forecastHeading'>Today's Weather</p>
             <div className='temp-pills-container'>
-                <WeatherPills/>
-                <WeatherPills/>
-                <WeatherPills/>
-                <WeatherPills/>
-                <WeatherPills/>
-                <WeatherPills/>
-                <WeatherPills/>
-                <WeatherPills/>
-            </div>
+                 {props.hourlyForecast.hourly.map((item,index)=> {return (index<12?<WeatherPills info={item} key={index}/>:"")}
+                )}
+            </div> 
         </div>
     );
 }

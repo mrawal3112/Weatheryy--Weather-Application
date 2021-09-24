@@ -113,18 +113,42 @@ input[type="text"] {
   font-size: 1rem;
 }
 .WeatherPage-container {
-  width: 85%;
+  width: 90%;
   height: auto;
   background-color: white;
-  margin: auto;
+  margin-bottom: 5rem;
   border-radius: 2rem;
   position: absolute;
-  left: 7%;
-  top: 7%;
+  left: 5%;
+  top: 5%;
   box-shadow: 2px 1px 11px 6px rgba(0, 0, 0, 0.25);
   padding-bottom: 2rem;
 }
 
 .cityWeatherInfo {
   padding: 0 3rem;
+}
+
+.loader-container {
+  margin: auto;
+  padding: 10rem 0;
+}
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  position: relative;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -11,7 +11,7 @@
   margin-top: 2rem;
 }
 .pill-container {
-  width: 11%;
+  width: 7%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -26,9 +26,8 @@
 }
 
 .weather-logo {
-  width: 3rem;
-  height: 3rem;
-  margin: 0.5rem 0;
+  width: 4.5rem;
+  height: 4.5rem;
 }
 .specifiedTime,
 .specifiedTemp {
