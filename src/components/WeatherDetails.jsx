@@ -74,8 +74,8 @@ const WeatherDetails = (props) => {
                 </div>
                 
                 <div className="grid-item">
-                    <div className='info-heading'>Chances Of Rain</div>
-                    <div className='info-details'>{!props.weatherInformation.hourly[0].hasOwnProperty('rain')?"0%":(Object.keys(props.weatherInformation.hourly[0].rain).length===0?((Math.round(props.weatherInformation.hourly[0].rain)*10) + '%'):((Math.round(props.weatherInformation.hourly[0].rain['1h'])*10) + '%'))}</div>
+                    <div className='info-heading'>Volume Of Rain</div>
+                    <div className='info-details'>{!props.weatherInformation.hourly[0].hasOwnProperty('rain')?"0 mm":((Math.round(props.weatherInformation.hourly[0].rain['1h']*100)) + ' mm')}</div>
                 </div>
             </div>
         </div>

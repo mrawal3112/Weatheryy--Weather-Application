@@ -2,6 +2,7 @@ import React from 'react';
 import './TodayWeather.css'
 import moment from 'moment';
 const ForecastTabs = (props) => {
+    console.log(props.info.rain)
     return ( 
         <div className='forecastTab-container'>
             <div className='infoConatainer'>
@@ -28,8 +29,8 @@ const ForecastTabs = (props) => {
             </div>
            
             <div className='infoConatainer'>
-                <div className='infoHeading'>Chances Of Rain</div>
-                <div className='infoData'>{!props.info.hasOwnProperty('rain')?"0%":((Math.round(props.info.rain))*10) + '%'}</div>
+                <div className='infoHeading'>Volume Of Rain</div>
+                <div className='infoData'>{!props.info.hasOwnProperty('rain')?"0 mm":((Math.round(props.info.rain*100))) + ' mm'}</div>
             </div>
 
         </div>
