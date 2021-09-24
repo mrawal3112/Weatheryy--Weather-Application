@@ -89,6 +89,9 @@
   .infoHeading {
     font-size: 0.75rem;
   }
+  .infoConatainer {
+    align-items: flex-start;
+  }
   .low-temp,
   .high-temp,
   .wind-speed,

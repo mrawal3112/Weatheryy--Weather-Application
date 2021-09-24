@@ -46,12 +46,12 @@ const WeatherDetails = (props) => {
                 
                 <div className="grid-item">
                     <div className='info-heading'>Visibility</div>
-                    <div className='info-details'>{((props.weatherInformation.hourly[0].visibility)/1000).toPrecision(2)+' Km'}</div>
+                    <div className='info-details'>{((props.weatherInformation.hourly[0].visibility)/1000).toPrecision(2)+'Km'}</div>
                 </div>
                 
                 <div className="grid-item">
                     <div className='info-heading'>Wind Speed</div>
-                    <div className='info-details'>{((props.weatherInformation.hourly[0].wind_speed)*3.6).toPrecision(2) + ' Km/h'}</div>
+                    <div className='info-details'>{((props.weatherInformation.hourly[0].wind_speed)*3.6).toPrecision(2) + 'Km/h'}</div>
                 </div>
                 
                 <div className="grid-item">
@@ -76,7 +76,7 @@ const WeatherDetails = (props) => {
                 
                 <div className="grid-item">
                     <div className='info-heading'>Volume Of Rain</div>
-                    <div className='info-details'>{!props.weatherInformation.hourly[0].hasOwnProperty('rain')?"0 mm":((Math.round(props.weatherInformation.hourly[0].rain['1h']*100)) + ' mm')}</div>
+                    <div className='info-details'>{!props.weatherInformation.hourly[0].hasOwnProperty('rain')?"0mm":((Math.round(props.weatherInformation.hourly[0].rain['1h']*100)) + 'mm')}</div>
                 </div>
             </div>
         </div>
