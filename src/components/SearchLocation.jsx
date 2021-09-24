@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React,{useState,useEffect} from 'react';
 import './HomePage.scss'
 import logo from '../Images/cloudy.png'

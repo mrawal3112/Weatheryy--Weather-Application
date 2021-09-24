@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import './WeatherDetails.scss'
 import moment from 'moment';
