@@ -20,12 +20,12 @@ const WeatherDetails = (props) => {
             <div className='additionalInfo'>
                 
                 <div className="grid-item">
-                    <div className='info-heading'>Highest Temp.</div>
+                    <div className='info-heading high-temp'>Highest Temp.</div>
                     <div className='info-details'>{(Math.round(props.weatherInformation.daily[0].temp.max))}<span>&#176;</span></div>
                 </div>
 
                 <div className="grid-item">
-                    <div className='info-heading'>Lowest Temp.</div>
+                    <div className='info-heading low-temp'>Lowest Temp.</div>
                     <div className='info-details'>{(Math.round(props.weatherInformation.daily[0].temp.min))}<span>&#176;</span></div>
                 </div>
                 
@@ -75,7 +75,7 @@ const WeatherDetails = (props) => {
                 </div>
                 
                 <div className="grid-item">
-                    <div className='info-heading'>Volume Of Rain</div>
+                    <div className='info-heading rain-volume'>Volume Of Rain</div>
                     <div className='info-details'>{!props.weatherInformation.hourly[0].hasOwnProperty('rain')?"0mm":((Math.round(props.weatherInformation.hourly[0].rain['1h']*100)) + 'mm')}</div>
                 </div>
             </div>

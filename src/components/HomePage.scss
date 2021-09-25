@@ -38,8 +38,7 @@
   display: flex;
   justify-content: center;
   margin: 1.5rem 0 1.5rem 0;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+  text-align: center;
 }
 .Weatheryy-Start-Button {
   width: 100%;
@@ -169,14 +168,35 @@ input[type="text"] {
   }
 }
 
-@media screen and (max-width: 420px) {
-  .Homepage-container {
-    width: 95%;
-    // min-height: 90%;
+@media screen and (max-width: 1030px) {
+  .WeatherPage-container {
+    width: 100%;
+    left: 0%;
+  }
+  .Weatheryy-Intro__HomePage {
+    font-size: 4rem;
+    margin: 2.5rem 0 2.5rem 0;
+  }
+  .Weatheryy-Logo__HomePage {
+    width: 16rem;
+    height: 16rem;
+    margin: 4rem;
+  }
+  .Weatheryy-Start-Button {
+    padding: 2.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .input-suggestion {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: smaller;
   }
   .Weatheryy-Intro__HomePage {
     font-size: 2.5rem;
-    text-align: center;
   }
   .Weatheryy-Logo__HomePage {
     width: 15rem;
@@ -197,11 +217,50 @@ input[type="text"] {
     left: 10%;
     width: 65%;
   }
-  .input-suggestion {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: smaller;
+  .Weatheryy-Logo__WeatherPage {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 1.5rem 0.5rem 1.5rem 1rem;
+  }
+  .Weatheryy-Intro__WeatherPage {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+  .cityWeatherInfo {
+    padding: 0 1rem;
+  }
+  .WeatherPage-container {
+    width: 100%;
+    left: 0%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .Homepage-container {
+    width: 95%;
+    // min-height: 90%;
+  }
+  .Weatheryy-Intro__HomePage {
+    font-size: 2.5rem;
+  }
+  .Weatheryy-Logo__HomePage {
+    width: 15rem;
+    height: 15rem;
+    margin: 3rem 3rem 2rem 3rem;
+  }
+  .Weatheryy-Logo__SearchPage {
+    margin: 1.5rem 0rem 1.5rem 1rem;
+  }
+  .Weatheryy-Intro__SearchPage {
+    font-size: 2rem;
+    margin: 3.25rem 1rem;
+  }
+  input[type="text"] {
+    left: 10%;
+  }
+  .autocomplete-dropdown-container {
+    left: 10%;
+    width: 65%;
   }
   .Weatheryy-Logo__WeatherPage {
     width: 2.5rem;

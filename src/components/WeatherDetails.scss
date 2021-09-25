@@ -73,6 +73,56 @@
   margin-top: 0.5rem;
 }
 
+@media screen and (max-width: 1030px) {
+  .additionalInfo {
+    column-gap: 0.5rem;
+  }
+  .info-details {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .Today_temp {
+    font-size: 5rem;
+    margin: 0;
+  }
+  .tempInfo {
+    flex-direction: column;
+    align-items: center;
+  }
+  .climateIcon {
+    padding: 0;
+  }
+  .low-temp,
+  .high-temp,
+  .rain-volume {
+    text-indent: -9999px;
+    line-height: 0;
+  }
+  .low-temp::after {
+    content: "Low";
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+  }
+  .high-temp::after {
+    content: "High";
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+  }
+  .rain-volume::after {
+    content: "Vol.Of Rain";
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+  }
+  .info-details {
+    font-size: 1.1rem;
+  }
+}
+
 @media screen and (max-width: 420px) {
   .WeatherDeatils-container {
     flex-direction: column;
@@ -82,6 +132,7 @@
     width: 100%;
     border-right: none;
     border-bottom: 1px solid black;
+    flex-direction: row;
   }
   .additionalInfo {
     width: 100%;
