@@ -62,6 +62,9 @@
 }
 
 @media screen and (max-width: 420px) {
+  .forecastTab-container {
+    justify-content: space-evenly;
+  }
   .forecastHeading {
     font-size: 1.5rem;
   }

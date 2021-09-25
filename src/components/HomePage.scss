@@ -171,7 +171,7 @@ input[type="text"] {
 
 @media screen and (max-width: 420px) {
   .Homepage-container {
-    width: 90%;
+    width: 95%;
     // min-height: 90%;
   }
   .Weatheryy-Intro__HomePage {
@@ -214,6 +214,10 @@ input[type="text"] {
   }
   .cityWeatherInfo {
     padding: 0 1rem;
+  }
+  .WeatherPage-container {
+    width: 95%;
+    left: 3%;
   }
 }
 
