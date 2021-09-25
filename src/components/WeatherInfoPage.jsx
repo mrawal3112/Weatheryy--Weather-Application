@@ -8,12 +8,17 @@ import './HomePage.scss'
 
 const WeatherInfoPage = (props) => {
 const[weatherInfo,setWeatherInfo] = useState([]);
+// const [backTrack,setBackTrack] = useState(false);
 
     useEffect(()=>{
         fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${props.geoLocation.lat}&lon=${props.geoLocation.lng}&exclude=alerts,minutely&appid=${process.env.REACT_APP_API_KEY_W}&units=metric`)
         .then(response => response.json())
         .then(json => setWeatherInfo(json))
     },[props.geoLocation])
+
+    // function backTrack(){
+
+    // }
     return ( 
         <React.Fragment>
             {Object.keys(weatherInfo).length===0?<>
@@ -22,7 +27,7 @@ const[weatherInfo,setWeatherInfo] = useState([]);
                 </div>
                 </>:
             <>
-            <div className='weatheryy-banner'>
+            <div className='weatheryy-banner' >
                     <div>
                         <img src={logo} alt='logo' className='Weatheryy-Logo__WeatherPage'></img>
                     </div>

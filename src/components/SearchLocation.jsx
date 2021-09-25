@@ -18,8 +18,6 @@ const SearchLocation = (props) => {
     };
     function displayWeather(e){
         e.preventDefault();
-        // console.log(location)
-        // console.log(coordinates)
         if(location.trim()==='')
         {
             alert('Please enter a valid location')
