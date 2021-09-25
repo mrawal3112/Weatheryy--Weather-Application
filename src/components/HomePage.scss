@@ -183,12 +183,20 @@ input[type="text"] {
     margin: 4rem;
   }
   .Weatheryy-Start-Button {
-    padding: 2.5rem;
+    padding: 2rem;
+    font-size: 1.5rem;
+  }
+  input[type="text"] {
+    height: 2rem;
     font-size: 1.5rem;
   }
 }
 
 @media screen and (max-width: 770px) {
+  input[type="text"] {
+    height: initial;
+    font-size: initial;
+  }
   .input-suggestion {
     white-space: nowrap;
     overflow: hidden;
@@ -214,7 +222,6 @@ input[type="text"] {
     left: 10%;
   }
   .autocomplete-dropdown-container {
-    left: 10%;
     width: 65%;
   }
   .Weatheryy-Logo__WeatherPage {
@@ -236,9 +243,12 @@ input[type="text"] {
 }
 
 @media screen and (max-width: 420px) {
+  .Weatheryy-Start-Button {
+    padding: 1.5rem;
+    font-size: 1.1rem;
+  }
   .Homepage-container {
     width: 95%;
-    // min-height: 90%;
   }
   .Weatheryy-Intro__HomePage {
     font-size: 2.5rem;
@@ -248,42 +258,19 @@ input[type="text"] {
     height: 15rem;
     margin: 3rem 3rem 2rem 3rem;
   }
-  .Weatheryy-Logo__SearchPage {
-    margin: 1.5rem 0rem 1.5rem 1rem;
-  }
-  .Weatheryy-Intro__SearchPage {
-    font-size: 2rem;
-    margin: 3.25rem 1rem;
-  }
-  input[type="text"] {
-    left: 10%;
-  }
   .autocomplete-dropdown-container {
     left: 10%;
     width: 65%;
   }
-  .Weatheryy-Logo__WeatherPage {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin: 1.5rem 0.5rem 1.5rem 1rem;
-  }
-  .Weatheryy-Intro__WeatherPage {
-    font-size: 1.5rem;
-    padding: 0.5rem;
-  }
-  .cityWeatherInfo {
-    padding: 0 1rem;
-  }
-  .WeatherPage-container {
-    width: 100%;
-    left: 0%;
+  .loader-container {
+    margin: auto;
+    padding: 18rem 0;
   }
 }
 
 @media screen and (max-width: 325px) {
   .Homepage-container {
     width: 90%;
-    // min-height: 90%;
   }
   .Weatheryy-Intro__HomePage {
     font-size: 2rem;
@@ -305,30 +292,14 @@ input[type="text"] {
   input[type="text"] {
     left: 10%;
   }
-  .autocomplete-dropdown-container {
-    left: 10%;
-    width: 65%;
-  }
   .input-suggestion {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: smaller;
   }
-  .Weatheryy-Logo__WeatherPage {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin: 1.5rem 0.5rem 1.5rem 1rem;
-  }
-  .Weatheryy-Intro__WeatherPage {
-    font-size: 1.5rem;
-    padding: 0.5rem;
-  }
-  .cityWeatherInfo {
-    padding: 0 1rem;
-  }
-  .WeatherPage-container {
-    width: 100%;
-    left: 0%;
+  .loader-container {
+    margin: auto;
+    padding: 11rem 0;
   }
 }
