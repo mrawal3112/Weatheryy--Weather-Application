@@ -1,8 +1,6 @@
 import moment from 'moment';
 import React from 'react';
 const WeatherPills = (props) => {
-console.log(!props.info.hasOwnProperty('rain')?"Property Doesn't exist" : props.info.rain['1h'])
-// console.log(props.info)
     return ( 
         <div className='pill-container'>
             <div className='specifiedTime'>{moment.unix(props.info.dt).format('hA')}</div>

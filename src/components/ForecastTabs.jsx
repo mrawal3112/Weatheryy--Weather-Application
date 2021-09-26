@@ -2,7 +2,6 @@ import React from 'react';
 import './TodayWeather.css'
 import moment from 'moment';
 const ForecastTabs = (props) => {
-    console.log(props.info.rain)
     return ( 
         <div className='forecastTab-container'>
             <div className='infoConatainer'>

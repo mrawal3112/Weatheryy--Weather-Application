@@ -5,10 +5,12 @@ import logo from '../Images/cloudy.png'
 import PlacesAutocomplete ,{geocodeByAddress,
     getLatLng}from 'react-places-autocomplete';
 
+
 const SearchLocation = (props) => {
     const[location,setLocation] = useState('');
     const[coordinates,setCoordinates] = useState({lat:'',lng:''})
     const[weatherPage,setWeatherPage] = useState(false)
+    
     const handleSelect = async value=>
     {
         const coords = await geocodeByAddress(value);
@@ -16,6 +18,7 @@ const SearchLocation = (props) => {
         setCoordinates(latlng)
         setLocation(value)
     };
+    
     function displayWeather(e){
         e.preventDefault();
         if(location.trim()==='')
@@ -25,17 +28,18 @@ const SearchLocation = (props) => {
         }
         else{
         setWeatherPage(prevWeatherPage=>!prevWeatherPage);
+        }
     }
-       
-    }
+
     useEffect(()=>{
         props.weatherInfo(weatherPage)
         props.cityInfo(location)
         props.coordsInfo(coordinates)
     },[weatherPage])
 
+
     return (
-        <React.Fragment>
+        <React.Fragment>  
         {!weatherPage && 
         <PlacesAutocomplete value={location} onChange={setLocation} onSelect={handleSelect}>
         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (

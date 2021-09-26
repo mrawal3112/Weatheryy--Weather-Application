@@ -5,7 +5,6 @@ import tz from 'moment-timezone';
 import './CityInfo.css'
 
 const CityInfo = (props) => {
-    console.log(props.date.current.dt)
     return (  
         <div>
             <p className='cityName'>{props.city}</p>
