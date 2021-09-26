@@ -43,8 +43,8 @@ const displayWeather = value => setWeatherPageValue(value)
                 <img src={logo} alt='logo' className='Weatheryy-Logo__HomePage'></img>
                 </div>
                 <div>
-                        <p className='Weatheryy-Intro__HomePage'>WEATHERYY</p>
-                    </div>
+                        <p className='Weatheryy-Intro__HomePage'>WELCOME TO WEATHERYY</p>
+                </div>
                 <div>
                 <button className='Weatheryy-Start-Button' onClick={changeState}><span>Get Started</span></button>
                 </div>
