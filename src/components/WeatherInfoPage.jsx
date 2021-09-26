@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect,useState } from 'react';
 import logo from '../Images/cloudy.png'
 import CityInfo from './CityInfo';

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React,{useState} from 'react';
 import './HomePage.scss'
 import SearchLocation from './SearchLocation';
@@ -35,7 +36,6 @@ const displayWeather = value => setWeatherPageValue(value)
     const getCoords = value =>{
         setCityCoords({lat:value.lat,lng:value.lng})
     } 
-console.log(trackSearchPage)
     return (  
         <div className={displayReport?'WeatherPage-container':'Homepage-container'}>
             {!getStarted && (<div className='homepage-container'>
@@ -49,9 +49,9 @@ console.log(trackSearchPage)
                 </div>
             </div>)}
 
-            {getStarted && <SearchLocation weatherInfo={weatherPage} cityInfo={getCity} coordsInfo={getCoords} searchLocationFlag={trackSearchPage} weatherBox={weatherPageValue}/>}
+            {getStarted && <SearchLocation weatherInfo={weatherPage} cityInfo={getCity} coordsInfo={getCoords} />}
             {displayReport && <WeatherInfoPage city={selectedCity} geoLocation={cityCoords} searchPage={displaySearchPage} weatherConatiner={displayWeather}/>}
-            {trackSearchPage && <SearchLocation weatherInfo={weatherPage} cityInfo={getCity} coordsInfo={getCoords} searchLocationFlag={trackSearchPage} weatherBox={weatherPageValue}/>}
+            {trackSearchPage && <SearchLocation weatherInfo={weatherPage} cityInfo={getCity} coordsInfo={getCoords} />}
         </div>
     );
 }

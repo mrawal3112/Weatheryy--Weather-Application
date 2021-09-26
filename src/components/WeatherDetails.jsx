@@ -5,6 +5,9 @@ import moment from 'moment';
 import tz from 'moment-timezone';
 
 const WeatherDetails = (props) => {
+
+    const Directions = ["N", "NE", "E", "SE", "S", "SW", "W", "NW", "N"];
+    const value = Math.round((props.weatherInformation.hourly[0].wind_deg % 360)/45)
     return ( 
         <>
         <div className='WeatherDeatils-container'>
@@ -36,7 +39,7 @@ const WeatherDetails = (props) => {
                 
                 <div className="grid-item">
                     <div className='info-heading'>Pressure</div>
-                    <div className='info-details'>{props.weatherInformation.hourly[0].pressure + ' hPa'}</div>
+                    <div className='info-details'>{props.weatherInformation.current.pressure + ' hPa'}</div>
                 </div>
                 
                 <div className="grid-item">
@@ -51,7 +54,7 @@ const WeatherDetails = (props) => {
                 
                 <div className="grid-item">
                     <div className='info-heading'>Wind Speed</div>
-                    <div className='info-details'>{((props.weatherInformation.hourly[0].wind_speed)*3.6).toPrecision(2) + 'Km/h'}</div>
+                    <div className='info-details'>{((props.weatherInformation.hourly[0].wind_speed)*3.6).toPrecision(2) + 'Km/h ' + Directions[value]}</div>
                 </div>
                 
                 <div className="grid-item">
