@@ -1,5 +1,4 @@
-/* eslint-disable */
-import React,{useState,useEffect} from 'react';
+import React,{useState,useEffect,useRef} from 'react';
 import './HomePage.scss'
 import logo from '../Images/cloudy.png'
 import PlacesAutocomplete ,{geocodeByAddress,
@@ -10,7 +9,9 @@ const SearchLocation = (props) => {
     const[location,setLocation] = useState('');
     const[coordinates,setCoordinates] = useState({lat:'',lng:''})
     const[weatherPage,setWeatherPage] = useState(false)
+    const fetchData = useRef(()=>{});
     
+
     const handleSelect = async value=>
     {
         const coords = await geocodeByAddress(value);
@@ -31,10 +32,13 @@ const SearchLocation = (props) => {
         }
     }
 
+    fetchData.current = ()=>{
+    props.weatherInfo(weatherPage)
+    props.cityInfo(location)
+    props.coordsInfo(coordinates)
+}
     useEffect(()=>{
-        props.weatherInfo(weatherPage)
-        props.cityInfo(location)
-        props.coordsInfo(coordinates)
+       fetchData.current();
     },[weatherPage])
 
 

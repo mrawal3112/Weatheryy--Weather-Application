@@ -1,5 +1,4 @@
-/* eslint-disable */
-import React, { useEffect,useState } from 'react';
+import React, { useEffect,useState,useRef } from 'react';
 import logo from '../Images/cloudy.png'
 import CityInfo from './CityInfo';
 import WeatherDetails from './WeatherDetails';
@@ -11,6 +10,7 @@ const WeatherInfoPage = (props) => {
 const[weatherInfo,setWeatherInfo] = useState([]);
 const[searchLocationPage,setSearchLocationPage] = useState(false);
 const[weatherPageInfo,setWeatherPageInfo] = useState(true);
+const fetchWeatherData = useRef(()=>{})
 
     useEffect(()=>{
         fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${props.geoLocation.lat}&lon=${props.geoLocation.lng}&exclude=alerts,minutely&appid=${process.env.REACT_APP_API_KEY_W}&units=metric`)
@@ -22,9 +22,13 @@ const flagSearchPage = ()=> {
     setSearchLocationPage(prevSearchLocationPage=>!prevSearchLocationPage)
 setWeatherPageInfo(prevWeatherPageInfo=>!prevWeatherPageInfo);
 }
+
+fetchWeatherData.current = ()=>{
+    props.searchPage(searchLocationPage)
+    props.weatherConatiner(weatherPageInfo)
+}
     useEffect(()=>{
-        props.searchPage(searchLocationPage)
-        props.weatherConatiner(weatherPageInfo)
+     fetchWeatherData.current();
     },[weatherPageInfo])
 
     return ( 

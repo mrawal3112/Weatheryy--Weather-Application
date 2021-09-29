@@ -11,7 +11,7 @@ const HomePage = () => {
     const [selectedCity,setselectedCity] = useState('');
     const[cityCoords,setCityCoords] = useState({lat:'',lng:''});
     const[trackSearchPage,setTrackSearchPage] = useState(false);
-    const [weatherPageValue,setWeatherPageValue] = useState('no-data')
+    const [weatherPageValue,setWeatherPageValue] = useState('')
 
     function changeState(){
         setGetStarted(prevGetStarted=> !prevGetStarted)
