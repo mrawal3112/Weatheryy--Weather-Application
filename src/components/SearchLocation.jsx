@@ -58,16 +58,16 @@ const SearchLocation = (props) => {
                 </div>
                 <div className='form-container'>
             <form onSubmit={displayWeather}>
+                <div style={{position:'relative',display:'inline'}}>
                 <input {...getInputProps({placeholder: 'Enter Location'})}/>
-
+                </div>
                 <div className="autocomplete-dropdown-container" >
                 {suggestions.map(suggestion => {
                     suggestion.id = suggestion.description;
-                    const style = suggestion.active ? { backgroundColor: '#ccc', cursor: 'pointer',}: { backgroundColor: '#ffffff', cursor: 'pointer' };
+                    const style = suggestion.active ? { backgroundColor: '#ccc', cursor: 'pointer'}: { backgroundColor: '#ffffff', cursor: 'pointer' };
                     return (  
                     <div className='input-suggestion' {...getSuggestionItemProps(suggestion, {style})}>                  
-                    {/* {console.log(suggestion)}  */}
-                         <i className="material-icons">location_on</i><span>{suggestion.description}</span>
+                        <p> <i className="material-icons">location_on</i><span>{suggestion.description}</span></p>
                     </div>
                     );
                 })}

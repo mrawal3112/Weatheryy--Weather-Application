@@ -115,9 +115,10 @@ input[type="text"] {
 }
 .autocomplete-dropdown-container {
   padding: 1rem;
-  position: relative;
+  position: absolute;
   left: 15%;
   width: 65%;
+  z-index: 99;
 }
 .searchedLocations {
   border: 1px solid red;
