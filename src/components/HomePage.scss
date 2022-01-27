@@ -45,12 +45,15 @@
   display: none;
   visibility: hidden;
 }
+#root > div > div > div > div.form-container > form > div > div > span > input {
+  margin: 0;
+}
 .formDisplay {
   width: 75%;
   margin: 0 auto;
 }
 #algolia-places-listbox-0 {
-  left: 5%;
+  left: 0% !important;
   max-height: inherit;
 }
 .Weatheryy-Start-Button {
@@ -260,7 +263,7 @@ input[type="text"] {
 
 @media screen and (max-width: 420px) {
   .Weatheryy-Start-Button {
-    padding: 1.5rem;
+    padding: 0.5rem;
     font-size: 1.1rem;
   }
   .Homepage-container {
