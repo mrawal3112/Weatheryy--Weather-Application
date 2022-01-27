@@ -46,9 +46,9 @@ const SearchLocation = (props) => {
                     </div>
             </div>
             <div className='form-container'>
-                <form onSubmit={displayWeather}>
-                    <div style={{position:'relative',display:'inline'}} >
-                    <AlgoliaPlaces style={{position:'relative',display:'inline'}} placeholder='Search location' options={{
+                <form onSubmit={displayWeather} className='formDisplay'>
+                    <div >
+                    <AlgoliaPlaces style={{width:'inherit', left:0}} placeholder='Search location' options={{
                     }}
                     onChange={({suggestion})=>{
                         setLocation(suggestion.name)

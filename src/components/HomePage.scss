@@ -45,13 +45,18 @@
   display: none;
   visibility: hidden;
 }
-
+.formDisplay {
+  width: 75%;
+  margin: 0 auto;
+}
+#algolia-places-listbox-0 {
+  left: 5%;
+  max-height: inherit;
+}
 .Weatheryy-Start-Button {
   width: 100%;
   padding: 1.5rem;
   background-color: rgba(137, 223, 251, 0.35);
-  // position: relative;
-  // left: 25%;
   border: none;
   outline: none;
   font-size: 1.25rem;
